@@ -1,0 +1,107 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.intro {
+    background: url('../../assets/images/couple.jpg') no-repeat center/cover;
+    width: 100%;
+    aspect-ratio: 500 / 891;
+    justify-content: flex-start;
+    padding-top: 10%;
+    color: #383838ff;
+    .save-the-date {
+        width: 140px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .date {
+        margin-top: 3%;
+        p {
+            font-family: 'ENGR', sans-serif;
+            font-size: 27.74px;
+            font-weight: 400;
+            letter-spacing: 0.281em;
+        }
+    }
+
+    .couple-name {
+        max-width: 380px;
+        margin-top: 5%;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    hr {
+        border-top: 1px solid #383838ff;
+        width: 52%;
+        margin: 3% 0 5%;
+    }
+
+    .location {
+        .name {
+            font-family: 'ENGR', sans-serif;
+            font-size: 17.64px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 3.5px;
+            margin-bottom: 3%;
+        }
+
+        .lobby {
+            font-family: 'SVN-Gotham', sans-serif;
+            font-weight: bold;
+            font-size: 6.35px; 
+            text-transform: uppercase;
+            margin-bottom: 1%;
+        }
+        .address {
+            font-family: 'SVN-GothamLight', sans-serif;
+            font-size: 6.35px; 
+            margin-bottom: 6%;
+        }
+
+        .btn-map {
+            font-size: 10.59px;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #fff;
+            padding: 2% 22%;
+            background-color: #383838ff;
+            border-radius: 6px;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .save-the-date {
+            width: calc((140px / 500px) * 100vw);
+        }
+
+        .date {
+            p {
+                font-size: calc((27.74px / 500px) * 100vw);
+            }
+        }
+    
+        .couple-name {
+            max-width: calc((380px / 500px) * 100vw);
+        }
+
+        .location {
+            .name {
+                font-size: calc((17.64px / 500px) * 100vw);
+            }
+
+            .lobby,.address{
+                font-size: calc((6.35px / 500px) * 100vw);
+            }
+    
+            .btn-map {
+                font-size: calc((10.59px / 500px) * 100vw);
+            }
+        }
+    }
+}

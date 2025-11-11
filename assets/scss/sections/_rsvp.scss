@@ -1,0 +1,258 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.rsvp {
+    background: url('../../assets/images/end-bg.webp') no-repeat bottom/contain,
+                url('../../assets/images/base-bg.webp') no-repeat center/cover;
+    max-width: 500px;
+    width: 100%;
+    aspect-ratio: 500 / 1192.27;
+    justify-content: start;
+    color: #383838ff;
+
+
+    .logo {
+        width: 134px;
+        margin-top: 12%;
+        perspective: 1000px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    h2.title {
+        font-size: 47.97px;
+        font-weight: 300;
+        font-family: 'MTD-ESTHER', sans-serif;
+        color: #5a3a21ff;
+        margin-top: 12%;
+        margin-bottom: 5%;
+    }
+
+    p.subtext {
+        font-family: 'SVN-GothamLight', sans-serif;
+        font-weight: 300;
+        font-size: 13.71px;
+        color: #383838ff;
+        padding: 0 14%;
+        margin-bottom: 6%;
+        text-align: justify;
+        text-align-last: center;
+        line-height: 180%;
+    }
+
+    .divider {
+        width: 18.67px;
+        margin-bottom: 5%;
+        perspective: 1000px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    hr {
+        border-top: 1px solid $secondary-color;
+        width: 84%;
+    }
+
+    #rsvp-form {
+        width: 100%;
+        padding: 7% 8% 5%;
+    }
+
+    .form-group {
+        width: 100%;
+        margin-bottom: 3%;
+        input[type="radio"] {
+            display: none;
+        }
+        
+        .radio-button {
+            @include flex-center;
+            font-size: 12.83px;
+            padding: 1.5% 0;
+            width: 190px;
+            border-radius: 12px;
+            border: 1px solid $secondary-color;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        input[type="radio"]:hover+.radio-button {
+            background-color: $secondary-color;
+            color: #ffffff;
+            transition: .3s ease;
+        }
+
+        input[type="radio"]:checked+.radio-button {
+            background-color: $secondary-color;
+            color: #ffffff;
+            border-color: $secondary-color;
+        }
+
+        input.input-text {
+            width: 100%;
+            padding: 2% 3%;
+            border-radius: 12px;
+            border: 1px solid $secondary-color;
+            text-decoration: none;
+            box-sizing: border-box;
+            outline: none;
+            background-color: transparent;
+            font-size: 10.43px;
+        }
+
+        input.input-text::placeholder {
+            font-size: .8em;
+        }
+
+        textarea.input-text {
+            font-family: 'SVN-GothamLight', sans-serif;
+            width: 100%;
+            font-size: 10.43px;
+            aspect-ratio: 311 / 90;
+            border-radius: 12px;
+            border: 1px solid $secondary-color;
+            background-color: transparent;
+            padding: 3% 4%;
+            box-sizing: border-box;
+            outline: none;
+            margin-top: 3%;
+            margin-bottom: 3%;
+        }
+    }
+
+    .number-people {
+        padding: 5% 0;
+    }
+
+    .guest-number-group, .child-number-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        label {
+            font-family: 'SVN-GothamLight', sans-serif;
+            font-style: italic;
+            color: $secondary-color;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 55%;
+            font-size: 12.83px;
+            text-transform: uppercase;
+            
+        }
+
+        input.input-text {
+            width: 45%;
+            max-width: 190px;
+        }
+
+    }
+
+    .form-group.options-group {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .wish-box {
+        text-align: center;
+
+        h2 {
+            font-size: 16.66px;
+            font-weight: 300;
+            color: $secondary-color;
+            margin-top: 20%;
+        }
+    
+        p {
+            text-align: justify;
+            text-align-last: center;
+            padding: 10% 3%;
+            line-height: 180%;
+        }
+    }
+
+    .form-actions {
+        display: flex;
+        justify-content: center;
+        button.btn {
+            background-color: $secondary-color;
+            font-family: 'SVN-GothamLight', sans-serif;
+            border: none;
+            color: #fff;
+            padding: 2% 17%;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 15px;
+            font-size: 12.83px;
+            cursor: pointer;
+        }
+
+        button.btn:hover {
+            color: #fff;
+            background-color: rgb(134, 99, 99);
+        }
+    }
+
+    @media (max-width: 500px) {
+        .logo {
+            width: calc((134px / 500px) * 100vw);
+        }
+
+        h2.title {
+            font-size: calc((47.97px / 500px) * 100vw);
+        }
+    
+        p.subtext {
+            font-size: calc((13.71px / 500px) * 100vw);
+        }
+        
+        .form-group {
+            .radio-button {
+                font-size: calc((12.83px / 500px) * 100vw);
+                width: calc((190px / 500px) * 100vw);
+            }
+
+            input.input-text {
+                font-size: calc((10.43px / 500px) * 100vw);
+            }
+
+            textarea.input-text {
+                font-size: calc((10.43px / 500px) * 100vw);
+            }
+        }
+
+        .guest-number-group, .child-number-group {
+            label {
+                font-size: calc((12.83px / 500px) * 100vw);
+            }
+    
+            input.input-text {
+                width: 45%;
+                max-width: 190px;
+            }
+    
+        }
+
+        .wish-box {
+            h2 {
+                font-size: calc((16.66px / 500px) * 100vw);
+            }
+        
+            p {
+                // font-size: calc(($base-font-size / 500px) * 100vw);
+            }
+        }
+
+        .form-actions {
+            button.btn {
+                font-size: 2.2vw;
+            }
+        }
+    }
+}

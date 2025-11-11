@@ -1,0 +1,416 @@
+@font-face {
+  font-family: "MTD-ESTHER";
+  src: url("../../assets/fonts/MTD-ESTHER.OTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ENGR";
+  src: url("../../assets/fonts/ENGR.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SVN-Gotham";
+  src: url("../fonts/SVN-Gotham.woff2") format("woff2"), url("../fonts/SVN-Gotham.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SVN-GothamLight";
+  src: url("../fonts/SVN-GothamLight.woff2") format("woff2"), url("../fonts/SVN-GothamLight.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 12.8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.container {
+  max-width: 500px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f09;
+  color: white;
+  padding: 1rem;
+}
+
+.image-wrapper {
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0;
+}
+.image-wrapper img {
+  width: 320px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.animate-flip {
+  transform-origin: left center;
+  transform: rotateY(-120deg) scale(0.9);
+  opacity: 0;
+  filter: brightness(0.6);
+  backface-visibility: hidden;
+  transition: none;
+}
+
+.animate-flip.active {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
+.timeline {
+  height: 200px;
+  width: 100%;
+  background-color: antiquewhite;
+  display: flex;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  top: 100px;
+  border-radius: 12px;
+}
+
+.red {
+  background: #e74c3c;
+}
+
+.blue {
+  background: #3498db;
+}
+
+.green {
+  background: #2ecc71;
+}
+
+.intro {
+  background: url("../../assets/images/couple.jpg") no-repeat center/cover;
+  width: 100%;
+  aspect-ratio: 500/891;
+  justify-content: flex-start;
+  padding-top: 10%;
+  color: #383838;
+}
+.intro .save-the-date {
+  width: 140px;
+}
+.intro .save-the-date img {
+  width: 100%;
+  height: auto;
+}
+.intro .date {
+  margin-top: 3%;
+}
+.intro .date p {
+  font-family: "ENGR", sans-serif;
+  font-size: 27.74px;
+  font-weight: 400;
+  letter-spacing: 0.281em;
+}
+.intro .couple-name {
+  max-width: 380px;
+  margin-top: 5%;
+}
+.intro .couple-name img {
+  width: 100%;
+  height: auto;
+}
+.intro hr {
+  border-top: 1px solid #383838;
+  width: 52%;
+  margin: 3% 0 5%;
+}
+.intro .location .name {
+  font-family: "ENGR", sans-serif;
+  font-size: 17.64px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 3.5px;
+  margin-bottom: 3%;
+}
+.intro .location .lobby {
+  font-family: "SVN-Gotham", sans-serif;
+  font-weight: bold;
+  font-size: 6.35px;
+  text-transform: uppercase;
+  margin-bottom: 1%;
+}
+.intro .location .address {
+  font-family: "SVN-GothamLight", sans-serif;
+  font-size: 6.35px;
+  margin-bottom: 6%;
+}
+.intro .location .btn-map {
+  font-size: 10.59px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 2% 22%;
+  background-color: #383838;
+  border-radius: 6px;
+}
+@media (max-width: 500px) {
+  .intro .save-the-date {
+    width: 28vw;
+  }
+  .intro .date p {
+    font-size: 5.548vw;
+  }
+  .intro .couple-name {
+    max-width: 76vw;
+  }
+  .intro .location .name {
+    font-size: 3.528vw;
+  }
+  .intro .location .lobby, .intro .location .address {
+    font-size: 1.27vw;
+  }
+  .intro .location .btn-map {
+    font-size: 2.118vw;
+  }
+}
+
+.rsvp {
+  background: url("../../assets/images/end-bg.webp") no-repeat bottom/contain, url("../../assets/images/base-bg.webp") no-repeat center/cover;
+  max-width: 500px;
+  width: 100%;
+  aspect-ratio: 500/1192.27;
+  justify-content: start;
+  color: #383838;
+}
+.rsvp .logo {
+  width: 134px;
+  margin-top: 12%;
+  perspective: 1000px;
+}
+.rsvp .logo img {
+  width: 100%;
+  height: auto;
+}
+.rsvp h2.title {
+  font-size: 47.97px;
+  font-weight: 300;
+  font-family: "MTD-ESTHER", sans-serif;
+  color: #5a3a21;
+  margin-top: 12%;
+  margin-bottom: 5%;
+}
+.rsvp p.subtext {
+  font-family: "SVN-GothamLight", sans-serif;
+  font-weight: 300;
+  font-size: 13.71px;
+  color: #383838;
+  padding: 0 14%;
+  margin-bottom: 6%;
+  text-align: justify;
+  text-align-last: center;
+  line-height: 180%;
+}
+.rsvp .divider {
+  width: 18.67px;
+  margin-bottom: 5%;
+  perspective: 1000px;
+}
+.rsvp .divider img {
+  width: 100%;
+  height: auto;
+}
+.rsvp hr {
+  border-top: 1px solid #5a3a21;
+  width: 84%;
+}
+.rsvp #rsvp-form {
+  width: 100%;
+  padding: 7% 8% 5%;
+}
+.rsvp .form-group {
+  width: 100%;
+  margin-bottom: 3%;
+}
+.rsvp .form-group input[type=radio] {
+  display: none;
+}
+.rsvp .form-group .radio-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12.83px;
+  padding: 1.5% 0;
+  width: 190px;
+  border-radius: 12px;
+  border: 1px solid #5a3a21;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.rsvp .form-group input[type=radio]:hover + .radio-button {
+  background-color: #5a3a21;
+  color: #ffffff;
+  transition: 0.3s ease;
+}
+.rsvp .form-group input[type=radio]:checked + .radio-button {
+  background-color: #5a3a21;
+  color: #ffffff;
+  border-color: #5a3a21;
+}
+.rsvp .form-group input.input-text {
+  width: 100%;
+  padding: 2% 3%;
+  border-radius: 12px;
+  border: 1px solid #5a3a21;
+  text-decoration: none;
+  box-sizing: border-box;
+  outline: none;
+  background-color: transparent;
+  font-size: 10.43px;
+}
+.rsvp .form-group input.input-text::placeholder {
+  font-size: 0.8em;
+}
+.rsvp .form-group textarea.input-text {
+  font-family: "SVN-GothamLight", sans-serif;
+  width: 100%;
+  font-size: 10.43px;
+  aspect-ratio: 311/90;
+  border-radius: 12px;
+  border: 1px solid #5a3a21;
+  background-color: transparent;
+  padding: 3% 4%;
+  box-sizing: border-box;
+  outline: none;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+.rsvp .number-people {
+  padding: 5% 0;
+}
+.rsvp .guest-number-group, .rsvp .child-number-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.rsvp .guest-number-group label, .rsvp .child-number-group label {
+  font-family: "SVN-GothamLight", sans-serif;
+  font-style: italic;
+  color: #5a3a21;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 55%;
+  font-size: 12.83px;
+  text-transform: uppercase;
+}
+.rsvp .guest-number-group input.input-text, .rsvp .child-number-group input.input-text {
+  width: 45%;
+  max-width: 190px;
+}
+.rsvp .form-group.options-group {
+  display: flex;
+  justify-content: space-between;
+}
+.rsvp .wish-box {
+  text-align: center;
+}
+.rsvp .wish-box h2 {
+  font-size: 16.66px;
+  font-weight: 300;
+  color: #5a3a21;
+  margin-top: 20%;
+}
+.rsvp .wish-box p {
+  text-align: justify;
+  text-align-last: center;
+  padding: 10% 3%;
+  line-height: 180%;
+}
+.rsvp .form-actions {
+  display: flex;
+  justify-content: center;
+}
+.rsvp .form-actions button.btn {
+  background-color: #5a3a21;
+  font-family: "SVN-GothamLight", sans-serif;
+  border: none;
+  color: #fff;
+  padding: 2% 17%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 15px;
+  font-size: 12.83px;
+  cursor: pointer;
+}
+.rsvp .form-actions button.btn:hover {
+  color: #fff;
+  background-color: rgb(134, 99, 99);
+}
+@media (max-width: 500px) {
+  .rsvp .logo {
+    width: 26.8vw;
+  }
+  .rsvp h2.title {
+    font-size: 9.594vw;
+  }
+  .rsvp p.subtext {
+    font-size: 2.742vw;
+  }
+  .rsvp .form-group .radio-button {
+    font-size: 2.566vw;
+    width: 38vw;
+  }
+  .rsvp .form-group input.input-text {
+    font-size: 2.086vw;
+  }
+  .rsvp .form-group textarea.input-text {
+    font-size: 2.086vw;
+  }
+  .rsvp .guest-number-group label, .rsvp .child-number-group label {
+    font-size: 2.566vw;
+  }
+  .rsvp .guest-number-group input.input-text, .rsvp .child-number-group input.input-text {
+    width: 45%;
+    max-width: 190px;
+  }
+  .rsvp .wish-box h2 {
+    font-size: 3.332vw;
+  }
+  .rsvp .form-actions button.btn {
+    font-size: 2.2vw;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
