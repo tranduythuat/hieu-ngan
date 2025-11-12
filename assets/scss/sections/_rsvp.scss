@@ -217,6 +217,7 @@
             .radio-button {
                 font-size: calc((12.83px / 500px) * 100vw);
                 width: calc((190px / 500px) * 100vw);
+                max-width: 190px;
             }
 
             input.input-text {
@@ -234,8 +235,7 @@
             }
     
             input.input-text {
-                width: 45%;
-                max-width: 190px;
+                width: calc((190px / 500px) * 100vw);
             }
     
         }

@@ -392,6 +392,7 @@ header {
   .rsvp .form-group .radio-button {
     font-size: 2.566vw;
     width: 38vw;
+    max-width: 190px;
   }
   .rsvp .form-group input.input-text {
     font-size: 2.086vw;
@@ -403,8 +404,7 @@ header {
     font-size: 2.566vw;
   }
   .rsvp .guest-number-group input.input-text, .rsvp .child-number-group input.input-text {
-    width: 45%;
-    max-width: 190px;
+    width: 38vw;
   }
   .rsvp .wish-box h2 {
     font-size: 3.332vw;
