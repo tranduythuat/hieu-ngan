@@ -65,7 +65,7 @@ async function handleFormSubmit(e) {
     },
   });
 
-  const url = "";
+  const url = "https://script.google.com/macros/s/AKfycbyuUOw_U3pIT1zaCiHeqMmErU8ETuy0A5iZF-Mu8PDIqJL892uI8SF2_4y-OALSnhO7/exec?sheet=sheet-1";
 
   try {
     const res = await fetch(url, {
@@ -89,7 +89,7 @@ async function handleFormSubmit(e) {
     // Thông báo thành công
     Swal.fire({
       title: "Thành công!",
-      text: "Cảm ơn bạn đã gửi phản hồi, thông tin đã được gửi đến dâu rể rồi nha",
+      text: "Cảm ơn bạn đã gửi phản hồi, thông tin đã được gửi đến Hiếu và Ngân rồi nha",
       icon: "success",
       confirmButtonText: "OK",
       confirmButtonColor: "#000",
