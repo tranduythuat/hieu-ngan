@@ -26,6 +26,15 @@
         }
     }
 
+    .timeline {
+        margin-top: 3%;
+        p {
+            font-family: 'SVN-GothamLight', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+        }
+    }
+
     .couple-name {
         max-width: 380px;
         margin-top: 5%;
@@ -83,6 +92,12 @@
         .date {
             p {
                 font-size: calc((27.74px / 500px) * 100vw);
+            }
+        }
+
+        .timeline {
+            p {
+                font-size: calc((11px / 500px) * 100vw);
             }
         }
     
